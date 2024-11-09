@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="project w-[100%] h-[100vh] bg-black flex">
+      <div
+        class="body-slider pl-6 w-[24%] h-[100vh] bg-[#013564] flex flex-col"
+      >
+        <div class="slide-logo">
+          <img class="w-[100px] ml-6" src="./images/logo.png" alt="" />
+        </div>
+
+        <div class="slide-countent m-auto">
+          <div
+            class="slide-information flex items-center justify-center text-center"
+          >
+            <i class="fa-regular fa-calendar text-white text-xl ml-2"></i>
+            <h2
+              class="font-normal text-xl p-2 rounded-xl text-white m-6 w-[100%] cursor-pointer transition hover:bg-white hover:text-black"
+            >
+              INFORMATION PERSONNEL
+            </h2>
+          </div>
+          <div
+            class="slide-competence flex items-center justify-center text-center"
+          >
+            <i class="fa-regular fa-calendar text-white text-xl ml-2"></i>
+            <h2
+              class="font-normal text-xl p-2 rounded-xl text-white m-6 w-[100%] cursor-pointer transition hover:bg-white hover:text-black"
+            >
+              DETAILS PROFESSIONNELS
+            </h2>
+          </div>
+
+          <div
+            class="slide-expernce flex items-center justify-center text-center"
+          >
+            <i class="fa-regular fa-calendar text-white text-xl ml-2"></i>
+            <h2
+              class="font-normal text-xl p-2 rounded-xl text-white m-6 w-[100%] cursor-pointer transition hover:bg-white hover:text-black"
+            >
+              COMPETENCES TECHNIQUES ET SOFT SKILLS
+            </h2>
+          </div>
+          <div
+            class="slide-fotmation flex items-center justify-center text-center"
+          >
+            <i class="fa-regular fa-calendar text-white text-xl ml-2"></i>
+            <h2
+              class="font-normal text-xl p-2 rounded-3xl text-white m-6 w-[100%] cursor-pointer transition hover:bg-white hover:text-black"
+            >
+              Langues
+            </h2>
+          </div>
+          <div
+            class="slide-project-realise flex items-center justify-center text-center"
+          >
+            <i class="fa-regular fa-calendar text-white text-xl ml-2"></i>
+            <h2
+              class="font-normal text-xl p-2 rounded-3xl text-white m-6 w-[100%] cursor-pointer transition hover:bg-white hover:text-black"
+            >
+              LOISIES ET INTERETS
+            </h2>
+          </div>
+          <div
+            class="slide-langeue flex items-center justify-center text-center"
+          >
+            <i class="fa-regular fa-calendar text-white text-xl ml-2"></i>
+            <h2
+              class="font-normal text-2xl p-2 rounded-3xl text-white m-6 w-[100%] cursor-pointer transition hover:bg-white hover:text-black"
+            >
+              CURSUS UNIVERSITAIRE
+            </h2>
+          </div>
+          <div
+            class="slide-langeue flex items-center justify-center text-center"
+          >
+            <i class="fa-regular fa-calendar text-white text-xl ml-2"></i>
+            <h2
+              class="font-normal text-xl p-2 rounded-3xl text-white m-6 w-[100%] cursor-pointer transition hover:bg-white hover:text-black"
+            >
+              EXPERIENCES PROFESSIONNELLES
+            </h2>
+          </div>
+          <div
+            class="slide-langeue flex items-center justify-center text-center"
+          >
+            <i class="fa-regular fa-calendar text-white text-xl ml-2"></i>
+            <h2
+              class="font-normal text-xl p-2 rounded-3xl text-white m-6 w-[100%] cursor-pointer transition hover:bg-white hover:text-black"
+            >
+              CERTIFICATIONS
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div
+        class="body-form w-[76%] h-[100vh] bg-[#F05252] p-10 flex flex-col justify-center"
+      >
+        <h2 class="text-4xl font-bold text-[#fff]">INFORMATION PERSONNEL</h2>
+        <div style="display: none">
+          <h2 class="text-4xl font-bold text-[#fff]">COMPÉTENCE TECHNIQUE</h2>
+          <h2 class="text-4xl font-bold text-[#fff]">
+            EXPERIENCE PROFESSIONNELLE
+          </h2>
+          <h2 class="text-4xl font-bold text-[#fff]">INFORMATION PERSONNEL</h2>
+          <h2 class="text-4xl font-bold text-[#fff]">INFORMATION PERSONNEL</h2>
+        </div>
+        <hr />
+        <form>
+          <div class="inputs-1" style="display: none">
+            <div class="full-name-age flex">
+              <div class="flex flex-col text-2xl w-[50%]">
+                <label class="text-[#fff]">nom et prénom</label>
+                <input
+                  type="text"
+                  class="px-3 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[60%]"
+                />
+              </div>
+
+              <div class="flex flex-col text-2xl w-[50%]">
+                <label class="text-[#fff]">age</label>
+                <input
+                  type="number"
+                  class="px-3 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[20%]"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col text-2xl">
+              <label class="text-[#fff]">Photo</label>
+              <input
+                type="file"
+                class="px-3 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[60%]"
+              />
+            </div>
+            <div class="flex flex-col text-2xl">
+              <label class="text-[#fff]">Email</label>
+              <input
+                type="email"
+                class="px-3 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[60%]"
+              />
+            </div>
+            <div class="flex flex-col text-2xl">
+              <label class="text-[#fff]">linkedin</label>
+              <input
+                type="text"
+                class="px-3 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[60%]"
+              />
+            </div>
+            <div class="flex flex-col text-2xl">
+              <label class="text-[#fff]">Githube</label>
+              <input
+                type="text"
+                class="px-3 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[60%]"
+              />
+            </div>
+          </div>
+          <div class="inputs-2" style="display: none">
+            <div class="flex flex-col text-2xl mt-8">
+              <label
+                class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white"
+                >Titre du poste</label
+              >
+              <input
+                type="text"
+                class="px-3 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[60%]"
+              />
+            </div>
+
+            <label
+              for="message"
+              class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white"
+              >Résumé de profil</label
+            >
+            <textarea
+              id="message"
+              rows="4"
+              class="block p-2.5 w-[80%] text-2xl text-gray-900 bg-gray-50 rounded-lg border-none fucus-border-none input-title focus:outline-[#ffff]"
+              placeholder="Write your thoughts here..."
+            ></textarea>
+          </div>
+          <div
+            class="inputs-3 flex w-[100%] justify-around items-center mt-7"
+            style="display: none"
+          >
+            <div
+              class="hard-skills w-[50%] flex flex-col justify-between pr-8 rounded-xl"
+            >
+              <div
+                class="titre-skills w-[100%] flex justify-between items-center pr-8"
+              >
+                <h2 class="text-2xl font-bold text-[#fff]">HARD SKILLS</h2>
+                <button
+                  onclick="btnAddHardSkill()"
+                  type="button"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600"
+                >
+                  <i class="fa-solid fa-plus"></i>
+                  ADD SKILL
+                </button>
+              </div>
+              <div class="flex flex-col text-2xl w-[100%]">
+                <input
+                  type="text"
+                  class="px-3 mt-4 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[95%]"
+                />
+              </div>
+            </div>
+            <div
+              class="soft-skills w-[50%] flex justify-between flex-col items-start rounded-xl pr-8"
+            >
+              <div
+                class="titre-skills w-[100%] flex justify-between items-start"
+              >
+                <h2 class="text-2xl font-bold text-[#fff]">SOFT SKILLS</h2>
+                <button
+                  onclick="btnAddSoftSkill()"
+                  type="button"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600"
+                >
+                  <i class="fa-solid fa-plus"></i>
+                  ADD SKILL
+                </button>
+              </div>
+              <div class="flex flex-col text-2xl w-[100%]">
+                <input
+                  type="text"
+                  class="px-3 mt-4 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[95%]"
+                />
+              </div>
+            </div>
+          </div>
+          <div style="display: none" class="inputs-4 section-langue">
+            <div class="flex flex-row justify-between mr-[20rem] text-2xl mt-8">
+              <label
+                class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white"
+              >
+                Liste des langues</label
+              >
+              <label
+                class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white"
+                >Le niveau
+              </label>
+              <button
+                onclick="addLangue()"
+                type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600"
+              >
+                <i class="fa-solid fa-plus"></i>
+                ADD LANGUES
+              </button>
+            </div>
+            <div class="flex flex-col text-2xl mt-8">
+              <div class="flex gap-20 w-[50%]">
+                <input
+                  type="text"
+                  class="input-language px-3 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[62%]"
+                />
+                <select
+                  class="w-[38%] text-2xl rounded-md border-none fucus-border-none py-2 mb-3 input-title focus:outline-[#ffff]"
+                >
+                  <option selected>choiser un niveaux</option>
+                  <option value="US">maternelle</option>
+                  <option value="US">A1</option>
+                  <option value="CA">A2</option>
+                  <option value="FR">B1</option>
+                  <option value="DE">B2</option>
+                  <option value="DE">C2</option>
+                  <option value="DE">C2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div style="display: none" class="inputs-5">
+            <div
+              class="loisirs mt-8 w-[60%] flex justify-between flex-col items-start rounded-xl pr-8"
+            >
+              <div class="w-[100%] flex justify-between items-start">
+                <h2 class="text-2xl font-bold text-[#fff]">Loisirs</h2>
+                <button
+                  onclick="btnAddLoisir()"
+                  type="button"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600"
+                >
+                  <i class="fa-solid fa-plus"></i>
+                  ADD LOISIRS
+                </button>
+              </div>
+              <div class="text-2xl w-[100%]">
+                <input
+                  type="text"
+                  class="px-3 mt-4 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[70%]"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="inputs-6">
+            <div
+              class="w-[100%] flex justify-between items-start mt-6 pr-[5rem]"
+            >
+              <h2 class="text-2xl font-bold text-[#fff] w-[40%]">
+                Établissement et Diplôme
+              </h2>
+              <h2 class="text-2xl font-bold text-[#fff]">DATE DE DEBUT</h2>
+              <h2 class="text-2xl font-bold text-[#fff]">DATE DE FIN</h2>
+              <button
+                type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600"
+              >
+                <i class="fa-solid fa-plus"></i>
+                AJOUTER PLUS
+              </button>
+            </div>
+            <div>
+              <div>
+                <input
+                  type="text"
+                  class="px-3 mt-4 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[40%]"
+                />
+                <input
+                  class="input-date p-3 text-[1.2em] font-semibold rounded-md ml-16 mr-[5rem]"
+                  type="date"
+                />
+                <input
+                  class="input-date p-3 text-[1.2em] font-semibold rounded-md"
+                  type="date"
+                />
+              </div>
+              <h2 class="text-2xl font-bold text-[#fff]">DESCRIPTION / REALISATIONS</h2>
+              <textarea
+              id="message"
+              rows="4"
+              class="block p-2.5 w-[80%] mt-2 text-2xl text-gray-900 bg-gray-50 rounded-lg border-none fucus-border-none input-title focus:outline-[#ffff]"
+              placeholder="Write your thoughts here..."
+            ></textarea>
+            </div>
+          </div>
+          <div class="btn-edit-remove text-end mr-[50px] mt-20">
+            <button
+              type="button"
+              class="button-cancel-2 text-white border-none bg-[#ffffff] border border-gray-100 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-[#a19d9d] dark:text-white dark:border-[#727070] dark:hover:bg-[#b1acac] dark:hover:border-[#b5b2b2] dark:focus:ring-[#ada9a9]"
+            >
+              Aperçu
+            </button>
+
+            <button
+              type="button"
+              class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            >
+              > prochaine
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/scripte.js"></script>
+  </body>
+</html>
