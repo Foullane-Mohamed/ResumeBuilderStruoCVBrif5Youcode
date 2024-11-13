@@ -12,11 +12,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <title>Document</title>
   </head>
   <body class="bg-[#F05252]">
     <div class="project w-[100%] flex">
-      <div style="display: none;"
+      <div
         class="body-slider pl-6 w-[30%] rounded-br-3xl rounded-tr-3xl fixed bg-[#013564] flex flex-col h-[100vh]"
       >
         <div class="slide-logo">
@@ -165,27 +166,62 @@
       <div
         class="body-form w-[70%] bg-[#F05252] p-10 flex flex-col ml-auto justify-center"
       >
-        <h2 style="display: none;" class="title-1 text-4xl font-bold text-[#fff]">INFORMATION PERSONNEL</h2>
+        <h2 class="title-1 text-4xl font-bold text-[#fff]">
+          INFORMATION PERSONNEL
+        </h2>
 
-        <h2 style="display: none;" class="title-2 text-4xl font-bold text-[#fff]">DETAILS PROFESSIONNELS</h2>
-      
-        <h2 style="display: none;" class="title-3 text-4xl font-bold text-[#fff]">COMPETENCES TECHNIQUES ET SOFT SKILLS</h2>
-        <h2 style="display: none;" class="title-4 text-4xl font-bold text-[#fff]">Langues</h2>
-        <h2 style="display: none;" class="title-5 text-4xl font-bold text-[#fff]">LOISIES ET INTERETS</h2>
-        <h2 style="display: none;" class="title-6 text-4xl font-bold text-[#fff]">CURSUS UNIVERSITAIRE</h2>
-        <h2 style="display: none;" class="title-7 text-4xl font-bold text-[#fff]">EXPERIENCES PROFESSIONNELLES</h2>
-        <h2 style="display: none;" class="title-8 text-4xl font-bold text-[#fff]">CERTIFICATIONS</h2>
-        <h2 style="display: none;" class="titre-choiser text-4xl font-bold text-[#fff]">CHOISIR VOTRE CHOIX</h2>
-    
+        <h2
+          style="display: none"
+          class="title-2 text-4xl font-bold text-[#fff]"
+        >
+          DETAILS PROFESSIONNELS
+        </h2>
 
-        <hr style="display: none;"/>
+        <h2
+          style="display: none"
+          class="title-3 text-4xl font-bold text-[#fff]"
+        >
+          COMPETENCES TECHNIQUES ET SOFT SKILLS
+        </h2>
+        <h2
+          style="display: none"
+          class="title-4 text-4xl font-bold text-[#fff]"
+        >
+          Langues
+        </h2>
+        <h2
+          style="display: none"
+          class="title-5 text-4xl font-bold text-[#fff]"
+        >
+          LOISIES ET INTERETS
+        </h2>
+        <h2
+          style="display: none"
+          class="title-6 text-4xl font-bold text-[#fff]"
+        >
+          CURSUS UNIVERSITAIRE
+        </h2>
+        <h2
+          style="display: none"
+          class="title-7 text-4xl font-bold text-[#fff]"
+        >
+          EXPERIENCES PROFESSIONNELLES
+        </h2>
+        <h2
+          style="display: none"
+          class="title-8 text-4xl font-bold text-[#fff]"
+        >
+          CERTIFICATIONS
+        </h2>
+
+        <hr class="hr1" />
         <form>
           <!--  -->
-          <div class="inputs-1 information-personnel" style="display: none">
+          <div style="display: block" class="inputs-1 information-personnel">
             <div class="full-name-age flex mt-4">
               <div class="flex flex-col text-2xl w-[50%]">
                 <label class="text-[#fff] mb-2">nom et prénom</label>
-                <input
+                <input 
                   type="text"
                   class="nom-et-prenom px-3 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[60%]"
                 />
@@ -228,7 +264,7 @@
               />
             </div>
           </div>
-          <div class="inputs-2 details-professionnels">
+          <div style="display: none" class="inputs-2 details-professionnels">
             <div class="flex flex-col text-2xl mt-8">
               <label
                 class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white"
@@ -252,7 +288,9 @@
               placeholder="Write your thoughts here..."
             ></textarea>
           </div>
-          <div  class="inputs-3 competences-techniques flex w-[100%] justify-around items-center mt-7"
+          <div
+            style="display: none"
+            class="inputs-3 competences-techniques flex w-[100%] justify-around items-center mt-7"
           >
             <div
               class="hard-skills w-[50%] flex flex-col justify-between pr-8 rounded-xl"
@@ -270,7 +308,7 @@
                   ADD SKILL
                 </button>
               </div>
-              <div class=" flex flex-col text-2xl w-[100%]">
+              <div class="flex flex-col text-2xl w-[100%]">
                 <input
                   type="text"
                   class="inputs-hard-skils px-3 mt-4 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[95%]"
@@ -293,15 +331,15 @@
                   ADD SKILL
                 </button>
               </div>
-              <div class=" flex flex-col text-2xl w-[100%]">
+              <div class="flex flex-col text-2xl w-[100%]">
                 <input
                   type="text"
-                  class=" inputs-soft-skill px-3 mt-4 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[95%]"
+                  class="inputs-soft-skill px-3 mt-4 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[95%]"
                 />
               </div>
             </div>
           </div>
-          <div class="inputs-4 langues section-langue">
+          <div style="display: none" class="inputs-4 langues section-langue">
             <div class="flex flex-row justify-between mr-[20rem] text-2xl mt-8">
               <label
                 class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white"
@@ -342,7 +380,7 @@
               </div>
             </div>
           </div>
-          <div class="inputs-5 loisies-et-interests">
+          <div style="display: none" class="inputs-5 loisies-et-interests">
             <div
               class="loisirs mt-8 w-[60%] flex justify-between flex-col items-start rounded-xl pr-8"
             >
@@ -357,7 +395,7 @@
                   ADD LOISIRS
                 </button>
               </div>
-              <div class=" text-2xl w-[100%]">
+              <div class="text-2xl w-[100%]">
                 <input
                   type="text"
                   class="inputs-loisirs px-3 mt-4 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[70%]"
@@ -365,7 +403,10 @@
               </div>
             </div>
           </div>
-          <div class="inputs-6 cursus-universitaire btn-coursus">
+          <div
+            style="display: none"
+            class=" inputs-6 cursus-universitaire btn-coursus"
+          >
             <div
               class="w-[100%] flex justify-between items-start mt-6 pr-[5rem]"
             >
@@ -387,14 +428,14 @@
               <div>
                 <input
                   type="text"
-                  class=" inputs-etablissement-et-diplome px-3 mt-2 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[40%]"
+                  class="inputs-etablissement-et-diplome px-3 mt-2 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[40%]"
                 />
                 <input
-                  class="inputs-date-de-debut input-date p-2 bg-white text-[1.2em] font-semibold rounded-md ml-16 mr-[5rem]"
+                  class="inputs-date-de-debut input-date p-2 bg-white text-[1.2em] rounded-md ml-16 mr-[5rem]"
                   type="date"
                 />
                 <input
-                  class="inputs-date-de-fin input-date p-2 bg-white text-[1.2em] font-semibold rounded-md"
+                  class="inputs-date-de-fin input-date p-2 bg-white text-[1.2em] rounded-md"
                   type="date"
                 />
               </div>
@@ -409,7 +450,11 @@
               ></textarea>
             </div>
           </div>
-          <div class="inputs-7 experiences-professionnelles">
+          <!--  -->
+          <div
+            style="display: none"
+            class="inputs-7 experiences-professionnelles"
+          >
             <div
               class="w-[100%] flex justify-between items-start mt-6 pr-[5rem]"
             >
@@ -434,11 +479,11 @@
                   class="inputs-entreprise-poste px-3 mt-2 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[40%]"
                 />
                 <input
-                  class="inputs-date-dubut-entreprise input-date p-2 bg-white text-[1.2em] font-semibold rounded-md ml-16 mr-[5rem]"
+                  class="inputs-date-dubut-entreprise input-date p-2 bg-white text-[1.2em] rounded-md ml-16 mr-[5rem]"
                   type="date"
                 />
                 <input
-                  class="inputs-date-fin-entreprise input-date p-2 bg-white text-[1.2em] font-semibold rounded-md"
+                  class="inputs-date-fin-entreprise input-date p-2 bg-white text-[1.2em] rounded-md"
                   type="date"
                 />
               </div>
@@ -453,7 +498,10 @@
               ></textarea>
             </div>
           </div>
-          <div class="countent-certifications inputs-8 certifications">
+          <div
+            style="display: none"
+            class="countent-certifications inputs-8 certifications"
+          >
             <div>
               <div
                 class="w-[100%] flex justify-between items-start mt-6 pr-[5rem]"
@@ -478,7 +526,7 @@
                   class="inputs-nom-certification px-3 mt-2 border-none fucus-border-none py-2 mb-3 rounded-md input-title focus:outline-[#ffff] w-[50%]"
                 />
                 <input
-                  class="inputs-date-obtention input-date p-2 bg-white text-[1.2em] font-semibold rounded-md ml-16 mr-[5rem]"
+                  class="inputs-date-obtention input-date p-2 bg-white text-[1.2em] rounded-md ml-16 mr-[5rem]"
                   type="date"
                 />
               </div>
@@ -509,29 +557,12 @@
               </div>
             </div>
           </div>
-          <!--  -->
-      <div style="display: none;" class="choiser">
-    
-        <div class="version flex justify-around gap-6 mt-8 ">
-          <div class="version1 w-[50%] h-[50vh]  flex text-center items-center justify-center">
-            <img class="w-[20rem]" src="./images/cv1.jpg" alt="">
-          </div>
-          <div class="version2 w-[50%] h-[50vh]   flex text-center items-center justify-center">
-            <img class="w-[20rem]" src="./images/cv2.webp" alt="">
-          </div>
-        </div>
-        <div class="buttons flex items-center justify-around mt-10">
-          <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">CHOIX 1</button>
-          <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">CHOIX 2</button>
+      
 
-        </div>
-      </div>
-          <!--  -->
           <div class="btn-edit-remove text-end mr-[50px] mt-20">
             <button
               type="button"
-              style="display: none;"
-              class=" btn-prochaine  text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-blue-300 dark:focus:ring-blue-800  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mr-20"
+              class="btn-prochaine text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-blue-300 dark:focus:ring-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mr-20"
             >
               > prochaine
             </button>
@@ -539,6 +570,137 @@
         </form>
       </div>
     </div>
+    <!--  -->
+    <div style="display: none" class="choiser">
+      <h2 class="text-center mb-8 titre-choiser text-4xl font-bold text-[#fff]">
+        CHOISIR VOTRE CHOIX
+      </h2>
+      <hr />
+      <div class="version flex justify-center gap-6 mt-8">
+        <div
+          class="version1 w-[20%] h-[50vh] flex text-center items-center justify-center"
+        >
+          <img class="w-[20rem]" src="./images/cv1.jpg" alt="" />
+        </div>
+        <div
+          class="version2 w-[20%] h-[50vh] flex text-center items-center justify-center"
+        >
+          <img class="w-[20rem]" src="./images/cv2.webp" alt="" />
+        </div>
+      </div>
+      <div
+        class="buttons m-auto flex items-center justify-around w-[40%] mt-10"
+      >
+        <button
+          type="button"
+          class="choix-cv-1 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        >
+          CHOIX 1
+        </button>
+        <button
+          type="button"
+          class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        >
+          CHOIX 2
+        </button>
+      </div>
+    </div>
+    <!--  -->
+    <div style="display: none" class="cv">
+      <div class="title-cv flex justify-center gap-20">
+        <h2
+          class="text-center mb-6 titre-choiser text-4xl font-bold text-[#fff]"
+        >
+          TELECHARGEZ LE FICHIER
+        </h2>
+        <button
+          type="button"
+          class="testt text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ml"
+        >
+          TELECHARGEZ TO PDF
+        </button>
+      </div>
+
+      <hr />
+      <div
+        style="display: none"
+        class="version-1-cv w-[794px] m-auto bg-white mt-6 mb-20 flex"
+      >
+        <div
+          class="part-1-cv-version1 w-[30%] bg-gray-50 h-full flex flex-col py-4"
+        ></div>
+
+        <div class="w-[70%] bg-white h-full p-6 overflow-y-auto">
+          <div class="div-resum-profil-cv1 mb-4"></div>
+
+          <div class="mb-4">
+            <h3 class="text-2xl font-semibold bg-[#70717317] rounded-md p-2">
+              Compétences techniques:
+            </h3>
+            <ul
+              class="li-competence-techniques mt-1 text-gray-700 text-xl text-start pl-2 columns-2 list-inside"
+            ></ul>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="text-2xl font-semibold bg-[#70717317] rounded-md p-2">
+              Compétences interpersonnelles:
+            </h3>
+            <ul
+              class="li-soft-skill-cv1 text-gray-700 text-xl text-start pl-2 list-inside"
+            ></ul>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="text-2xl font-semibold bg-[#70717317] rounded-md p-2">
+              Langues:
+            </h3>
+            <ul
+              class="div-langue-cv1 mt-1 text-gray-700 text-xl text-start pl-2 list-inside"
+            ></ul>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="text-2xl font-semibold bg-[#70717317] rounded-md p-2">
+              Loisirs et intérêts:
+            </h3>
+            <ul
+              class="div-loisirs mt-1 text-gray-700 text-xl text-start pl-2 list-inside"
+            ></ul>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="text-2xl font-semibold bg-[#70717317] rounded-md p-2">
+              Formations et diplômes:
+            </h3>
+            <div class="dev-information-personelle">
+          
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="text-2xl font-semibold bg-[#70717317] rounded-md p-2">
+              Expériences professionnelles:
+            </h3>
+            <div class="div-experiences-pro">
+        
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold bg-[#70717317] rounded-md p-2">
+              Certifications:
+            </h3>
+            <div class="div-certifications">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
     <script src="./js/scripte.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
   </body>
 </html>

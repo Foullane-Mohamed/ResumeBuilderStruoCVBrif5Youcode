@@ -5,7 +5,7 @@ let loisirs = document.querySelector(".loisirs");
 let coursus = document.querySelector(".btn-coursus");
 let countentCertifications = document.querySelector(".countent-certifications");
 let btnProchaine = document.querySelector(".btn-prochaine");
-
+let btnCoixCv1 = document.querySelector(".choix-cv-1");
 let informationPersonnel = document.querySelector(".information-personnel");
 let detailsProfessionnels = document.querySelector(".details-professionnels");
 let competencesTechniques = document.querySelector(".competences-techniques");
@@ -15,8 +15,24 @@ let cursusUniversitaire = document.querySelector(".cursus-universitaire");
 let experiencesProfessionnelles = document.querySelector(
   ".experiences-professionnelles"
 );
+let divCertificationsCv1 = document.querySelector('.div-certifications')
+let divExperiencesProCv1 = document.querySelector('.div-experiences-pro')
+let divInformationPersoneelCv1 = document.querySelector(
+  ".dev-information-personelle"
+);
+let divLoisirsCv1 = document.querySelector(".div-loisirs");
+let divLangueCv1 = document.querySelector(".div-langue-cv1");
+let lSoftSkillC1 = document.querySelector(".li-soft-skill-cv1");
+let liCompetenceTechniquesCv1 = document.querySelector(
+  ".li-competence-techniques"
+);
+let devProfilVersion1 = document.querySelector(".div-resum-profil-cv1");
+let divCv = document.querySelector(".cv");
+let versionCv1 = document.querySelector(".version-1-cv");
+let hrStyle = document.querySelector(".hr1");
+let sectionChoiserCv = document.querySelector(".choiser");
 let certifications = document.querySelector(".certifications");
-
+let sectionTitlseLeft = document.querySelector(".body-slider");
 let icon1 = document.querySelector(".icon-1");
 let icon11 = document.querySelector(".icon-11");
 let icon2 = document.querySelector(".icon-2");
@@ -41,6 +57,7 @@ let title5 = document.querySelector(".title-5");
 let title6 = document.querySelector(".title-6");
 let title7 = document.querySelector(".title-7");
 let title8 = document.querySelector(".title-8");
+let part1Cv1 = document.querySelector(".part-1-cv-version1");
 
 detailsProfessionnels.style.display = "none";
 competencesTechniques.style.display = "none";
@@ -49,6 +66,7 @@ loisiesEtInterests.style.display = "none";
 cursusUniversitaire.style.display = "none";
 experiencesProfessionnelles.style.display = "none";
 certifications.style.display = "none";
+
 btnProchaine.addEventListener("click", () => {
   changeStyle();
 });
@@ -76,12 +94,8 @@ function changeStyle() {
     icon11.style.display = "block";
     title1.style.display = "none";
     title2.style.display = "block";
-    inputNomEtPrenom = document.querySelector(".nom-et-prenom").value;
-    inputAge = document.querySelector(".age").value;
-    inputPhoto = document.querySelector(".photo").value;
-    inputEmail = document.querySelector(".email").value;
-    inputLinkedin = document.querySelector(".linkedin").value;
-    inputGithube = document.querySelector(".githube").value;
+    informationPersonellFunction();
+    // informationPersonellSaiserDatat()
   } else if (detailsProfessionnels.style.display === "block") {
     detailsProfessionnels.style.display = "none";
     competencesTechniques.style.display = "block";
@@ -137,8 +151,28 @@ function changeStyle() {
     icon8.style.display = "none";
     icon88.style.display = "block";
     title8.style.display = "none";
+    sectionChoiserCv.style.display = "block";
+    sectionTitlseLeft.style.display = "none";
+    hrStyle.style.display = "none";
+    btnProchaine.style.display = "none";
     countentCertificationsFunction();
   }
+}
+btnCoixCv1.addEventListener("click", () => {
+  versionCv1.style.display = "";
+  divCv.style.display = "block";
+  sectionChoiserCv.style.display = "none";
+  remplaireCvV1();
+});
+
+function informationPersonellFunction() {
+  inputNomEtPrenom = document.querySelector(".nom-et-prenom").value;
+  inputAge = document.querySelector(".age").value;
+  let inputPhotosUrl = document.querySelector(".photo").files[0];
+  inputPhoto = URL.createObjectURL(inputPhotosUrl);
+  inputEmail = document.querySelector(".email").value;
+  inputLinkedin = document.querySelector(".linkedin").value;
+  inputGithube = document.querySelector(".githube").value;
 }
 function countentCertificationsFunction() {
   let nomCertifacationVar = document.querySelectorAll(
@@ -192,14 +226,16 @@ function experiencesProfessionnellesFunction() {
     };
     inputsExperiencesProfessionnelles.push(experiencesObject);
   }
+
+  
 }
 function cursusUniversitaireFunction() {
   let etablissementEtDiplomeVar = document.querySelectorAll(
     ".inputs-etablissement-et-diplome"
   );
-  let dateDebutVar = document.querySelector(".inputs-date-de-debut");
-  let dateFinVar = document.querySelector(".inputs-date-de-fin");
-  let descriptionRealisationsVar = document.querySelector(
+  let dateDebutVar = document.querySelectorAll(".inputs-date-de-debut");
+  let dateFinVar = document.querySelectorAll(".inputs-date-de-fin");
+  let descriptionRealisationsVar = document.querySelectorAll(
     ".inputs-description-realisations"
   );
   let ursusUniversitaireObje = {};
@@ -211,7 +247,10 @@ function cursusUniversitaireFunction() {
       description: descriptionRealisationsVar[i].value,
     };
     inputsCursusUniversitaire.push(ursusUniversitaireObje);
+  
+    
   }
+  console.log(inputsCursusUniversitaire);
 }
 function loisirsFunction() {
   let loisirsVar = document.querySelectorAll(".inputs-loisirs");
@@ -425,3 +464,190 @@ function certificationsFunction() {
           </div>
     `;
 }
+
+let btndwlond = document.querySelector(".testt");
+
+function remplaireCvV1() {
+  part1Cv1.innerHTML += `
+  
+    
+          
+          <div class="w-[80%] rounded-xl h-48 bg-blue-800 mb-4">
+            <img
+              src="${inputPhoto}"
+              alt=""
+              class="w-full m-auto h-full object-cover rounded-xl"
+            />
+          </div>
+
+          <div class="mb-4">
+            <h3
+              class="text-2xl font-semibold text-center bg-[#70717317] rounded-md p-2 w-[100%]"
+            >
+              Nom
+            </h3>
+            <p class="mt-1 text-gray-700 text-start pl-2 text-xl">
+              ${inputNomEtPrenom}
+            </p>
+          </div>
+
+          <div class="mb-4">
+            <h3
+              class="text-2xl font-semibold text-center bg-[#70717317] rounded-md p-2"
+            >
+              Email
+            </h3>
+            <p class="mt-1 text-gray-700 text-xl text-start pl-2">
+              ${inputEmail}
+            </p>
+          </div>
+
+        
+
+      
+
+          <div class="mb-4">
+            <h3
+              class="text-2xl font-semibold text-center bg-[#70717317] rounded-md p-2"
+            >
+              LinkedIn
+            </h3>
+            <p class="mt-1 text-gray-700 text-xl text-start pl-2">
+              ${inputLinkedin}
+            </p>
+          </div>
+
+          <div class="mb-4">
+            <h3
+              class="text-2xl font-semibold text-center bg-[#70717317] rounded-md p-2"
+            >
+              GitHub
+            </h3>
+            <p class="mt-1 text-gray-700 text-xl text-start pl-2">
+              ${inputGithube}
+            </p>
+          </div>
+
+        
+
+          <div>
+            <h3
+              class="text-2xl font-semibold text-center bg-[#70717317] rounded-md p-2"
+              text-center
+            >
+              Âge
+            </h3>
+            <p class="mt-1 text-gray-700 text-xl text-start pl-2">${inputAge} ans</p>
+          </div>
+        
+  
+  `;
+  devProfilVersion1.innerHTML = `   
+     <p class="mt-1 text-gray-700 text-3xl mb-4 text-center font-bold">
+              ${inputTitreDePoste}
+            </p>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="text-2xl font-semibold bg-[#70717317] rounded-md p-2">
+              Résumé du profil:
+            </h3>
+            <p class="mt-1 text-gray-700 text-xl text-start pl-2">
+            ${inputResumeDeProfil}
+            </p>
+            `;
+  for (let i = 0; i < inputHardSkills.length; i++) {
+    liCompetenceTechniquesCv1.innerHTML += `
+              <li class="flex">${inputHardSkills[i]}</li>
+              `;
+  }
+  for (let i = 0; i < inputSoftSkills.length; i++) {
+    lSoftSkillC1.innerHTML += `
+                <li>${inputSoftSkills[i]}</li>
+              `;
+  }
+  for (let i = 0; i < inputsLangues.length; i++) {
+    divLangueCv1.innerHTML += `
+                  <li><span class="font-medium text-lg">${inputsLangues[i].listeDesLangues}</span>: ${inputsLangues[i].leNiveaux}</li>
+              `;
+  }
+  for (let i = 0; i < inputsLoisir.length; i++) {
+    divLoisirsCv1.innerHTML += `
+                <li>${inputsLoisir[i]}</li>
+              
+              `;
+  }
+  for (let i = 0; i < inputsCursusUniversitaire.length; i++) {
+    divInformationPersoneelCv1.innerHTML += `
+    <h4 class="font-medium text-lg uppercase">
+                ${inputsCursusUniversitaire[i].cetablissement}
+              </h4>
+              <span class="mt-1 text-gray-700 text-xl text-start pl-2">
+                ${inputsCursusUniversitaire[i].dateDebut}
+                </span>
+              <span class="mt-1 text-gray-700 text-xl text-start pl-2">
+                ${inputsCursusUniversitaire[i].dateFin}
+                </span>
+              <p class="mt-1 text-gray-700 text-lg text-start pl-2">
+                ${inputsCursusUniversitaire[i].description}
+              </p>
+
+
+
+              `;
+              
+              
+  }
+  for (let i = 0; i < inputsExperiencesProfessionnelles.length; i++) {
+    divExperiencesProCv1.innerHTML +=`
+    
+          <h4 class="font-medium text-lg uppercase">${inputsExperiencesProfessionnelles[i].entreprisePoste}</h4>
+              <span class="mt-1 text-gray-700 text-xl text-start pl-2"
+                >${inputsExperiencesProfessionnelles[i].dateDubutEntreprise}</span
+              >
+              <span class="mt-1 text-gray-700 text-xl text-start pl-2"
+                >${inputsExperiencesProfessionnelles[i].dateFinEntreprise}</span
+              >
+              <p class="mt-1 text-gray-700 text-lg text-start pl-2">
+                ${inputsExperiencesProfessionnelles[i].missionRealisation}
+              </p>
+    
+    `
+    
+  }
+  for (let i = 0; i < inputsCertifications.length; i++) {
+    divCertificationsCv1.innerHTML +=`
+      <h4 class="font-medium text-lg uppercase">${inputsCertifications[i].nomCertifacation}</h4>
+              <span class="mt-1 text-gray-700 text-xl text-start pl-2"
+                >${inputsCertifications[i].dateObtCertifacation}</span
+              >
+              <h5 class="mt-1 text-gray-700 text-lg text-start pl-2">
+                ${inputsCertifications[i].organisationDelevCertifacation}
+              </h5>
+              <h5 class="mt-1 text-gray-700 text-lg text-start pl-2">
+                ${inputsCertifications[i].lienCertifacationVar}
+              </h5>
+              <p class="mt-1 text-gray-700 text-lg text-start pl-2">
+              ${inputsCertifications[i].descriptionCertifacation}
+              </p>
+    `
+    
+  }
+}
+
+btndwlond.addEventListener("click", async function () {
+  const filename = "my-cv.pdf";
+
+  const options = {
+    margin: 0,
+    filename: filename,
+    image: { type: "jpeg", quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+  };
+  try {
+    await html2pdf().set(options).from(versionCv1).save();
+  } catch (error) {
+    console.error("false:", error.message);
+  }
+});
