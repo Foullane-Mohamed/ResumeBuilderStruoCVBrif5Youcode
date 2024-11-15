@@ -15,8 +15,8 @@ let cursusUniversitaire = document.querySelector(".cursus-universitaire");
 let experiencesProfessionnelles = document.querySelector(
   ".experiences-professionnelles"
 );
-let divCertificationsCv1 = document.querySelector('.div-certifications')
-let divExperiencesProCv1 = document.querySelector('.div-experiences-pro')
+let divCertificationsCv1 = document.querySelector(".div-certifications");
+let divExperiencesProCv1 = document.querySelector(".div-experiences-pro");
 let divInformationPersoneelCv1 = document.querySelector(
   ".dev-information-personelle"
 );
@@ -87,7 +87,28 @@ let inputsExperiencesProfessionnelles = [];
 let inputsCertifications = [];
 
 function changeStyle() {
-  if (informationPersonnel.style.display === "block") {
+  let isActive = "false";
+  let valideName = document.querySelector(".nom-et-prenom").value;
+  let validAge = document.querySelector(".age").value;
+  let validEmail = document.querySelector(".email").value;
+  let validLinkedin = document.querySelector(".linkedin").value;
+  let validGithube = document.querySelector(".githube").value;
+  let validTitrePost = document.querySelector(".titre-du-poste").value;
+  let validResumeProfil = document.querySelector(".resume-de-profil").value;
+  let validInputPhotosUrl = document.querySelector(".photo").files[0];
+  let validInputPhoto = URL.createObjectURL(validInputPhotosUrl);
+  if (
+    valideName.trim() !== "" &&
+    validAge.trim() !== "" &&
+    validEmail.trim() !== "" &&
+    validLinkedin.trim() !== "" &&
+    validGithube.trim() !== "" &&
+    validInputPhoto != ""
+  ) {
+    isActive = "active";
+  }
+
+  if (informationPersonnel.style.display === "block" && isActive === "active") {
     informationPersonnel.style.display = "none";
     detailsProfessionnels.style.display = "block";
     icon1.style.display = "none";
@@ -95,8 +116,15 @@ function changeStyle() {
     title1.style.display = "none";
     title2.style.display = "block";
     informationPersonellFunction();
-    // informationPersonellSaiserDatat()
-  } else if (detailsProfessionnels.style.display === "block") {
+  }
+  isActive = "false";
+  if (validTitrePost.trim() !== "" && validResumeProfil.trim() !== "") {
+    isActive = "active";
+  }
+  if (
+    detailsProfessionnels.style.display === "block" &&
+    isActive === "active"
+  ) {
     detailsProfessionnels.style.display = "none";
     competencesTechniques.style.display = "block";
     icon2.style.display = "none";
@@ -105,7 +133,19 @@ function changeStyle() {
     title3.style.display = "block";
     inputTitreDePoste = document.querySelector(".titre-du-poste").value;
     inputResumeDeProfil = document.querySelector(".resume-de-profil").value;
-  } else if (competencesTechniques.style.display === "block") {
+  }
+  let validHardSkils = document.querySelector(".inputs-hard-skils").value;
+  let validSoftSkils = document.querySelector(".inputs-soft-skill").value;
+
+  isActive = "false";
+  if (validHardSkils !== "" && validSoftSkils !== "") {
+    isActive = "active";
+  }
+
+  if (
+    competencesTechniques.style.display === "block" &&
+    isActive === "active"
+  ) {
     competencesTechniques.style.display = "none";
     sectionLangue.style.display = "block";
     icon3.style.display = "none";
@@ -114,7 +154,15 @@ function changeStyle() {
     title4.style.display = "block";
     selectAllValuesOfInputsHardSkills();
     selectAllValuesOfInputsSoftSkills();
-  } else if (sectionLangue.style.display === "block") {
+  }
+  let validLangue = document.querySelector(".input-language").value;
+  isActive = "false";
+
+  if (validLangue.trim() !== "") {
+    isActive = "active";
+  }
+
+  if (sectionLangue.style.display === "block" && isActive === "active") {
     sectionLangue.style.display = "none";
     loisiesEtInterests.style.display = "block";
     icon4.style.display = "none";
@@ -122,7 +170,14 @@ function changeStyle() {
     title4.style.display = "none";
     title5.style.display = "block";
     langueFunction();
-  } else if (loisiesEtInterests.style.display === "block") {
+  }
+  let validLoisirs = document.querySelector(".inputs-loisirs").value;
+  isActive = "false";
+  if (validLoisirs.trim() !== "") {
+    isActive = "active";
+  }
+
+  if (loisiesEtInterests.style.display === "block" && isActive === "active") {
     loisiesEtInterests.style.display = "none";
     cursusUniversitaire.style.display = "block";
     icon5.style.display = "none";
@@ -130,7 +185,30 @@ function changeStyle() {
     title5.style.display = "none";
     title6.style.display = "block";
     loisirsFunction();
-  } else if (cursusUniversitaire.style.display === "block") {
+  }
+  let validEtablissemnt = document.querySelector(
+    ".inputs-etablissement-et-diplome"
+  ).value;
+  let vlideDateDebutEtablissemt = document.querySelector(
+    ".inputs-date-de-debut"
+  ).value;
+  let validDateFinEtablissemt = document.querySelector(
+    ".inputs-date-de-fin"
+  ).value;
+  let valideDescriptionEtablisemt = document.querySelector(
+    ".inputs-description-realisations"
+  ).value;
+  isActive = "false";
+  if (
+    validEtablissemnt.trim() !== "" &&
+    vlideDateDebutEtablissemt.trim() !== "" &&
+    validDateFinEtablissemt.trim() !== "" &&
+    valideDescriptionEtablisemt.trim() !== ""
+  ) {
+    isActive = "active";
+  }
+
+  if (cursusUniversitaire.style.display === "block" && isActive === "active") {
     cursusUniversitaire.style.display = "none";
     experiencesProfessionnelles.style.display = "block";
     icon6.style.display = "none";
@@ -138,7 +216,31 @@ function changeStyle() {
     title6.style.display = "none";
     title7.style.display = "block";
     cursusUniversitaireFunction();
-  } else if (experiencesProfessionnelles.style.display === "block") {
+  }
+  let validEntreprisePoste = document.querySelector(".inputs-entreprise-poste").value;
+  let validDateDubutEntreprise = document.querySelector(
+    ".inputs-date-dubut-entreprise"
+  ).value;
+  let validDateFinEntreprise = document.querySelector(
+    ".inputs-date-fin-entreprise"
+  ).value;
+  let valiDmissionRealisation = document.querySelector(
+    ".inputs-missinon-realisation"
+  ).value;
+  isActive = "false";
+  if (
+    validEntreprisePoste.trim() !== "" &&
+    validDateDubutEntreprise.trim() !== "" &&
+    validDateFinEntreprise.trim() !== "" &&
+    valiDmissionRealisation.trim() !== ""
+  ) {
+    isActive = "active";
+  }
+
+  if (
+    experiencesProfessionnelles.style.display === "block" &&
+    isActive === "active"
+  ) {
     experiencesProfessionnelles.style.display = "none";
     certifications.style.display = "block";
     icon7.style.display = "none";
@@ -146,7 +248,37 @@ function changeStyle() {
     title7.style.display = "none";
     title8.style.display = "block";
     experiencesProfessionnellesFunction();
-  } else if (certifications.style.display === "block") {
+  } 
+  let validNomCertifacation = document.querySelector(
+    ".inputs-nom-certification"
+  ).value;
+  let validDateObtCertifacation = document.querySelector(
+    ".inputs-date-obtention"
+  ).value;
+  let validOrganisationDelevCertifacation = document.querySelector(
+    ".inputs-organisme-delivrance"
+  ).value;
+  let validLienCertifacation = document.querySelector(
+    ".inputs-lien-certification"
+  ).value;
+  let validDescriptionCertifacation = document.querySelector(
+    ".inputs-descriptin-certification"
+  ).value;
+  
+  isActive = "false";
+  if (
+    validNomCertifacation.trim() !== "" &&
+    validDateObtCertifacation.trim() !== "" &&
+    validOrganisationDelevCertifacation.trim() !== "" &&
+    validLienCertifacation.trim() !== "" &&
+    validDescriptionCertifacation.trim() !== ""
+  ) {
+    isActive = "active";
+  }
+
+
+
+  if (certifications.style.display === "block" && isActive === "active") {
     certifications.style.display = "none";
     icon8.style.display = "none";
     icon88.style.display = "block";
@@ -158,6 +290,7 @@ function changeStyle() {
     countentCertificationsFunction();
   }
 }
+
 btnCoixCv1.addEventListener("click", () => {
   versionCv1.style.display = "";
   divCv.style.display = "block";
@@ -168,8 +301,10 @@ btnCoixCv1.addEventListener("click", () => {
 function informationPersonellFunction() {
   inputNomEtPrenom = document.querySelector(".nom-et-prenom").value;
   inputAge = document.querySelector(".age").value;
+
   let inputPhotosUrl = document.querySelector(".photo").files[0];
   inputPhoto = URL.createObjectURL(inputPhotosUrl);
+
   inputEmail = document.querySelector(".email").value;
   inputLinkedin = document.querySelector(".linkedin").value;
   inputGithube = document.querySelector(".githube").value;
@@ -226,8 +361,6 @@ function experiencesProfessionnellesFunction() {
     };
     inputsExperiencesProfessionnelles.push(experiencesObject);
   }
-
-  
 }
 function cursusUniversitaireFunction() {
   let etablissementEtDiplomeVar = document.querySelectorAll(
@@ -247,8 +380,6 @@ function cursusUniversitaireFunction() {
       description: descriptionRealisationsVar[i].value,
     };
     inputsCursusUniversitaire.push(ursusUniversitaireObje);
-  
-    
   }
   console.log(inputsCursusUniversitaire);
 }
@@ -595,11 +726,9 @@ function remplaireCvV1() {
 
 
               `;
-              
-              
   }
   for (let i = 0; i < inputsExperiencesProfessionnelles.length; i++) {
-    divExperiencesProCv1.innerHTML +=`
+    divExperiencesProCv1.innerHTML += `
     
           <h4 class="font-medium text-lg uppercase">${inputsExperiencesProfessionnelles[i].entreprisePoste}</h4>
               <span class="mt-1 text-gray-700 text-xl text-start pl-2"
@@ -612,11 +741,10 @@ function remplaireCvV1() {
                 ${inputsExperiencesProfessionnelles[i].missionRealisation}
               </p>
     
-    `
-    
+    `;
   }
   for (let i = 0; i < inputsCertifications.length; i++) {
-    divCertificationsCv1.innerHTML +=`
+    divCertificationsCv1.innerHTML += `
       <h4 class="font-medium text-lg uppercase">${inputsCertifications[i].nomCertifacation}</h4>
               <span class="mt-1 text-gray-700 text-xl text-start pl-2"
                 >${inputsCertifications[i].dateObtCertifacation}</span
@@ -630,8 +758,7 @@ function remplaireCvV1() {
               <p class="mt-1 text-gray-700 text-lg text-start pl-2">
               ${inputsCertifications[i].descriptionCertifacation}
               </p>
-    `
-    
+    `;
   }
 }
 
@@ -642,7 +769,7 @@ btndwlond.addEventListener("click", async function () {
     margin: 0,
     filename: filename,
     image: { type: "jpeg", quality: 0.98 },
-    html2canvas: { scale: 2 },
+    html2canvas: { scale: 4 },
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
   };
   try {
